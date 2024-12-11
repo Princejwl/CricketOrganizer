@@ -1,0 +1,301 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    /* background: linear-gradient(to bottom, #95ad7a, #c9b7b7);  */
+    /* background-color: #f9fafb;
+     */
+    /* background: linear-gradient(to bottom, #81c784, #a5d6a7); */
+
+
+
+    background: linear-gradient(90deg, #81c784, #a5d6a7, #81c784);
+    background-size: 300% 300%;
+    animation: backgroundAnimation 10s ease infinite;
+
+
+    @keyframes backgroundAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+
+#navbar:hover {
+    filter: brightness(1.1);
+}
+
+#navbar-logo:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+#navbar h1 {
+    font-family: 'Poppins', sans-serif;
+    /* Clean and modern font */
+    font-size: 24px;
+    /* Adjust text size */
+    font-weight: bold;
+    color: white;
+    /* White text on green background */
+    margin: 0;
+    /* Remove default margin */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    /* Glow effect */
+}
+
+/* Optional hover effect */
+#navbar h1:hover {
+    color: #FFD700;
+    /* Golden hover color */
+    cursor: pointer;
+    /* Pointer on hover */
+}
+
+#navbar {
+    background: linear-gradient(90deg, #32CD32, #228B22);
+    /* Light to dark green */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #58eb4b;
+    color: white;
+    display: flex;
+    /* Flexbox for alignment */
+    align-items: center;
+    /* Vertically center align items */
+    justify-content: center;
+    /* Center everything horizontally */
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#toss-screen {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#toss-screen button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#toss-screen button:hover {
+    background-color: #2563eb;
+}
+
+
+#teams {
+    display: inline-block;
+    /* Make the container adjust to the text size */
+    background-color: #32CD32;
+    /* Set the background color */
+    color: white;
+    /* Set the text color */
+    padding: 5px 10px;
+    /* Add some padding around the text */
+    border-radius: 5px;
+    /* Optional: Add rounded corners */
+    text-align: center;
+    /* Center the text */
+    font-size: 1.5rem;
+    /* Adjust font size */
+    font-weight: bold;
+    /* Make the text bold */
+    margin: 10px auto;
+    /* Optional: Add spacing around */
+}
+
+#navbar-logo {
+    height: 80px;
+    /* Adjust height for your logo */
+    margin-right: 20px;
+    /* Space between logo and text */
+}
+
+
+h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+section {
+    text-align: center;
+
+}
+
+#landing-screen,
+#input-screen,
+#scoreboard {
+    display: none;
+    /* Hide screens initially */
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#landing-screen {
+    display: block;
+}
+
+
+h2 {
+    font-size: 2rem;
+    color: #1d4ed8;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: rgb(61, 51, 51)
+}
+
+button {
+    padding: 15px 30px;
+    /* Larger padding for a clickable button */
+    font-size: 1.3rem;
+    /* Increase font size */
+    background-color: #32CD32;
+    /* Bright green for attention */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    /* Rounded button */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Smooth transitions for hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Subtle button shadow */
+}
+
+button:hover {
+    background-color: green;
+}
+
+input[type="text"],
+input[type="number"] {
+    margin: 15px 0;
+    padding: 12px;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#actions button {
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+#actions button:hover {
+    background-color: #2563eb;
+}
+
+#player-selection {
+    margin-top: 20px;
+}
+
+#player-selection select {
+    margin: 5px;
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#back-to-input {
+    position: absolute;
+    /* Positioning to move it to a specific place */
+    bottom: 10px;
+    /* Distance from the bottom */
+    left: 10px;
+    /* Distance from the left side */
+    background-color: #f44336;
+    /* Red color for "Back" */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+#back-to-input:hover {
+    background-color: #d32f2f;
+    /* Darker red on hover */
+}
+
+#scoreboard {
+    position: relative;
+    /* Ensures the button stays within this container */
+}
+
+#match-result {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #1d4ed8;
+    font-weight: bold;
+}
+
+#match-result h3 {
+    font-size: 1.5rem;
+}
+
+#match-result p {
+    margin: 10px 0;
+}
+
+#match-result h4 {
+    font-size: 1.3rem;
+    color: #ff5722;
+}

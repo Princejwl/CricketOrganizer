@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TurfPlay: Cricket Organizer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet"> -->
+
+</head>
+
+<body>
+    <!-- Landing Screen -->
+
+    <div id="navbar">
+        <img src="102085134b834d061185fcb0d9d75f04-removebg-preview.png" alt="Logo" id="navbar-logo">
+        <h1>TurfPlay: LiveCricketScore</h1>
+    </div>
+    <section id="landing-screen">
+        <h2>Welcome to TurfPlay</h2>
+        <p>Create your live cricket scorecard and manage matches seamlessly!</p>
+        <button id="create-scorecard-btn">Create Scorecard</button>
+    </section>
+
+    <!-- Input Screen -->
+    <section id="input-screen" class="hidden">
+        <div class="form-container">
+            <h2>Enter Match Details</h2>
+            <form id="match-form">
+                <input type="text" id="team-a-name" placeholder="Enter Team A Name" required>
+                <input type="text" id="team-b-name" placeholder="Enter Team B Name" required>
+                <input type="number" id="overs" placeholder="Enter Number of Overs" required>
+                <input type="text" id="team-a-players" placeholder="Enter Team A Players (comma separated)" required>
+                <input type="text" id="team-b-players" placeholder="Enter Team B Players (comma separated)" required>
+                <button type="button" id="start-match-btn">Start Match</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Toss Screen -->
+    <div id="toss-screen" style="display: none;">
+        <h2>Toss Time!</h2>
+        <p>Which team wins the toss?</p>
+        <button id="team-a-toss-btn"></button>
+        <button id="team-b-toss-btn"></button>
+        <p id="toss-winner"></p>
+        <p>Choose to:</p>
+        <button id="bat-btn">Bat</button>
+        <button id="bowl-btn">Bowl</button>
+    </div>
+
+
+    <!-- Scoreboard Screen -->
+    <section id="scoreboard" class="hidden">
+        <div id="match-info">
+            <h2 id="teams">Team A vs Team B</h2>
+            <p id="score">Team A: 0/0 (0.0 Overs)</p>
+            <p id="batsmen">Striker: Player 1 | Non-Striker: Player 2</p>
+        </div>
+
+
+
+        <!-- Action Buttons -->
+        <div id="actions">
+            <button data-action="addRun">Add 1 Run</button>
+            <button data-action="twoRuns">Add 2 Runs</button>
+            <button data-action="threeRuns">Add 3 Runs</button>
+            <button data-action="four">Four</button>
+            <button data-action="six">Six</button>
+            <button data-action="noBall">No Ball</button>
+            <button data-action="wide">Wide Ball</button>
+            <button data-action="out">Out</button>
+        </div>
+
+        <button id="back-to-input">Back</button>
+
+        <!-- Select Striker/Non-Striker -->
+        <div id="player-selection">
+            <h3>Select Batsmen</h3>
+            <label for="striker">Striker:</label>
+            <select id="striker"></select>
+
+            <label for="non-striker">Non-Striker:</label>
+            <select id="non-striker"></select>
+        </div>
+
+
+
+        <!-- Match Result -->
+        <div id="match-result" class="hidden">
+            <h3>Match Result:</h3>
+            <p id="team-a-result"></p>
+            <p id="team-b-result"></p>
+            <h4 id="winner"></h4>
+        </div>
+
+        <!-- <button id="undo-btn">Undo Last Action</button> -->
+
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
